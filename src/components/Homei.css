@@ -1,0 +1,23 @@
+.page-homei{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    /* background-image: url(./assets/4.PNG); */
+    /* background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* border: white 5px solid; */
+    /* background-attachment: scroll; */
+    /* color: #FFAD91; */
+    /* background-image: linear-gradient(to bottom left,#333333 , #333333);   */
+    /* background-image: url(./assets/4.PNG); */
+    background-color: white;
+    color: black;
+}
+/* Container{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+} */
+/* FF5E5B,D8D8D8,FFFFEA */
+/* 333333,48E5C2,FCFAF9 */
