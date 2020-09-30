@@ -139,14 +139,14 @@ export default class Home extends Component {
                 <Container>
                     <div className="major-row-1">
                         <svg className="boy-with-hanging-leg big-screen" viewBox="0 0 1920 789" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Frame" clip-path="url(#clip0)">
+                            <g id="Frame" clipPath="url(#clip0)">
                                 <g id="wall">
                                     <path id="Vector" d="M1920 52.7V793.97H0V721.85C134.02 577.46 336.47 485.47 563 485.47C571.9 485.47 580.77 485.61 589.59 485.9C602.58 486.5 615.54 487.22 628.47 488.05C628.47 488.05 628.47 488.05 628.48 488.05C630.91 488.21 633.34 488.37 635.77 488.53C712.11 493.66 787.97 504.23 863.04 519.01C900.05 526.3 937.42 532.61 975.1 537.92C1069.89 551.27 1166.73 558.27 1265.16 558.46C1266.61 558.47 1268.05 558.47 1269.5 558.47C1270.95 558.47 1272.39 558.47 1273.84 558.46C1585.49 556.48 1846.73 342.04 1920 52.7Z" fill="#E6E6E6" />
                                     <path id="Vector_2" d="M1920 41V52.7C1846.73 342.04 1585.49 556.48 1273.84 558.46C1272.39 558.47 1270.95 558.47 1269.5 558.47C1268.05 558.47 1266.61 558.47 1265.16 558.46C1166.73 558.27 1069.89 551.27 975.1 537.92C937.42 532.61 900.05 526.3 863.04 519.01C787.97 504.23 712.11 493.66 635.77 488.53C633.34 488.37 630.91 488.21 628.48 488.05C628.47 488.05 628.47 488.05 628.47 488.05C615.54 487.22 602.58 486.5 589.59 485.9C580.77 485.61 571.9 485.47 563 485.47C336.47 485.47 134.02 577.46 0 721.85V694.22C127.57 533.55 347.45 434.87 597.3 434.87C605.99 434.87 614.66 434.99 623.28 435.26C635.97 435.81 648.64 436.46 661.27 437.22C661.27 437.22 661.27 437.22 661.28 437.22C663.65 437.37 666.03 437.51 668.4 437.66C743 442.35 817.12 452 890.47 465.5C926.64 472.16 963.15 477.93 999.97 482.78C1092.59 494.97 1187.21 491.32 1283.39 491.49C1284.81 491.5 1286.22 491.5 1287.63 491.5C1289.05 491.5 1290.46 491.5 1291.87 491.49C1591.96 489.71 1844.22 299.47 1920 41Z" fill="#CCCCCC" />
                                 </g>
                                 <g id="human">
                                     <g id="Ellipse 1" filter="url(#filter0_f)">
-                                        <ellipse rx="131.939" ry="10.6933" transform="matrix(0.99914 -0.0414566 0.0382382 0.999269 1255.51 537.215)" fill="#7E84A3" fill-opacity="0.2" />
+                                        <ellipse rx="131.939" ry="10.6933" transform="matrix(0.99914 -0.0414566 0.0382382 0.999269 1255.51 537.215)" fill="#7E84A3" fillOpacity="0.2" />
                                     </g>
                                     <g id="Group">
                                         <g id="Group_2">
@@ -196,16 +196,16 @@ export default class Home extends Component {
                                 </g>
                             </g>
                             <defs>
-                                <filter id="filter0_f" x="1114.68" y="516.209" width="281.652" height="42.0131" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <filter id="filter0_f" x="1114.68" y="516.209" width="281.652" height="42.0131" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                                     <feGaussianBlur stdDeviation="4.5" result="effect1_foregroundBlur" />
                                 </filter>
                                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
                                     <use />
                                 </pattern>
-                                <filter id="filter1_f" x="1157.2" y="496.89" width="143.397" height="214.107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <filter id="filter1_f" x="1157.2" y="496.89" width="143.397" height="214.107" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                                     <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur" />
                                 </filter>
@@ -216,8 +216,8 @@ export default class Home extends Component {
                                     <use />
                                 </pattern>
                                 <linearGradient id="paint0_linear" x1="1357.22" y1="383.864" x2="1315.57" y2="358.061" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#E8BBA4" />
-                                    <stop offset="1" stop-color="#F1CEB8" />
+                                    <stop stopColor="#E8BBA4" />
+                                    <stop offset="1" stopColor="#F1CEB8" />
                                 </linearGradient>
                                 <clipPath id="clip0">
                                     <rect width="1920" height="789" fill="white" />
@@ -230,7 +230,7 @@ export default class Home extends Component {
                         {/* break */}
 
                         {/* <svg className="boy-with-hanging-leg small-screen" viewBox="960 0 1920 789" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Frame" clip-path="url(#clip0)">
+                            <g id="Frame" clipPath="url(#clip0)">
                                 <g id="wall">
                                     <path id="Vector" d="M1920 52.7V793.97H0V721.85C134.02 577.46 336.47 485.47 563 485.47C571.9 485.47 580.77 485.61 589.59 485.9C602.58 486.5 615.54 487.22 628.47 488.05C628.47 488.05 628.47 488.05 628.48 488.05C630.91 488.21 633.34 488.37 635.77 488.53C712.11 493.66 787.97 504.23 863.04 519.01C900.05 526.3 937.42 532.61 975.1 537.92C1069.89 551.27 1166.73 558.27 1265.16 558.46C1266.61 558.47 1268.05 558.47 1269.5 558.47C1270.95 558.47 1272.39 558.47 1273.84 558.46C1585.49 556.48 1846.73 342.04 1920 52.7Z" fill="#E6E6E6" />
                                     <path id="Vector_2" d="M1920 41V52.7C1846.73 342.04 1585.49 556.48 1273.84 558.46C1272.39 558.47 1270.95 558.47 1269.5 558.47C1268.05 558.47 1266.61 558.47 1265.16 558.46C1166.73 558.27 1069.89 551.27 975.1 537.92C937.42 532.61 900.05 526.3 863.04 519.01C787.97 504.23 712.11 493.66 635.77 488.53C633.34 488.37 630.91 488.21 628.48 488.05C628.47 488.05 628.47 488.05 628.47 488.05C615.54 487.22 602.58 486.5 589.59 485.9C580.77 485.61 571.9 485.47 563 485.47C336.47 485.47 134.02 577.46 0 721.85V694.22C127.57 533.55 347.45 434.87 597.3 434.87C605.99 434.87 614.66 434.99 623.28 435.26C635.97 435.81 648.64 436.46 661.27 437.22C661.27 437.22 661.27 437.22 661.28 437.22C663.65 437.37 666.03 437.51 668.4 437.66C743 442.35 817.12 452 890.47 465.5C926.64 472.16 963.15 477.93 999.97 482.78C1092.59 494.97 1187.21 491.32 1283.39 491.49C1284.81 491.5 1286.22 491.5 1287.63 491.5C1289.05 491.5 1290.46 491.5 1291.87 491.49C1591.96 489.71 1844.22 299.47 1920 41Z" fill="#CCCCCC" />
@@ -287,16 +287,16 @@ export default class Home extends Component {
                                 </g>
                             </g>
                             <defs>
-                                <filter id="filter0_f" x="1114.68" y="516.209" width="281.652" height="42.0131" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <filter id="filter0_f" x="1114.68" y="516.209" width="281.652" height="42.0131" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                                     <feGaussianBlur stdDeviation="4.5" result="effect1_foregroundBlur" />
                                 </filter>
                                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
                                     <use />
                                 </pattern>
-                                <filter id="filter1_f" x="1157.2" y="496.89" width="143.397" height="214.107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <filter id="filter1_f" x="1157.2" y="496.89" width="143.397" height="214.107" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                                     <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur" />
                                 </filter>
@@ -307,8 +307,8 @@ export default class Home extends Component {
                                     <use />
                                 </pattern>
                                 <linearGradient id="paint0_linear" x1="1357.22" y1="383.864" x2="1315.57" y2="358.061" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#E8BBA4" />
-                                    <stop offset="1" stop-color="#F1CEB8" />
+                                    <stop stopColor="#E8BBA4" />
+                                    <stop offset="1" stopColor="#F1CEB8" />
                                 </linearGradient>
                                 <clipPath id="clip0">
                                     <rect width="1920" height="789" fill="white" />
@@ -365,19 +365,21 @@ export default class Home extends Component {
                         <div className="project-container">
                             <div className="project-card">
                                 <div className="project-image-box">
-                                    <img loading="lazy" className="img2" src="/assets/asme-contact-us.png" alt="asme contact us section screenshot"/>
-                                    <img loading="lazy" className="img1" src="/assets/asme-home.png" alt="asme home section screenshot"/>
+                                {/* <img loading="lazy" className="img2" src="/assets/asme-contact-us.png" alt="asme contact us section screenshot"/> */}
+                                    <img loading="lazy" className="img2" src="https://freeimage.host/i/2EEF3v" alt="asme contact us section screenshot"/>
+                                    {/* <img loading="lazy" className="img1" src="/assets/asme-home.png" alt="asme home section screenshot"/> */}
+                                    <img loading="lazy" className="img1" src="https://freeimage.host/i/2EE26J" alt="asme home section screenshot"/>
                                 </div>
                                 <div className="project-content">
                                 <div className="top">
-                                    <i class="project-tech-used fab fa-react"></i>
+                                    <i className="project-tech-used fab fa-react"></i>
                                     <button  className="project-my-role">Front-end developement  </button>
                                 </div>
                                     <div className="project-card-text">
                                         <h3><strong className="asme"></strong><br></br>ASME IIT Roorkee Chapter</h3>
                                         {/* <p>A fully fuctional website for american society of mechanical engineers (ASME) IIT Roorkee chapter</p> */}
                                         <div className="project-buttons">
-                                            <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020"><i class="fab fa-github"></i></a>
+                                            <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020"><i className="fab fa-github"></i></a>
                                             {/* <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020" ><i >go to website</i></a> */}
                                             <OverlayTrigger overlay={<Tooltip id="tooltip tooltip-disabled">Coming Soon...</Tooltip>}>
                                             <span className="d-inline-block">
@@ -405,7 +407,7 @@ export default class Home extends Component {
                                         <h3><strong className="asme"></strong><br></br>Google Game Jam 2020</h3>
                                         {/* <p>A fully fuctional website for american society of mechanical engineers (ASME) IIT Roorkee chapter</p> */}
                                         <div className="project-buttons">
-                                            <a className="project-button" href="https://github.com/PrajjawalSahu/ggj2020/"><i class="fab fa-github"></i></a>
+                                            <a className="project-button" href="https://github.com/PrajjawalSahu/ggj2020/"><i className="fab fa-github"></i></a>
                                             {/* <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020" ><i >go to website</i></a> */}
                                             
                                         </div>
@@ -481,9 +483,9 @@ export default class Home extends Component {
                             <a className="email" href="mailto:prajjawalsahu2001@gmail.com">prajjawalsahu2001@gmail.com</a>
                             </p>
                             <div className="contact-social project-buttons">
-                            <a className="contacts-social-button" href="mailto:prajjawalsahu2001@gmail.com"><i class="fas fa-envelope"></i></a>
-                            <a className="contacts-social-button" href="https://github.com/PrajjawalSahu"><i class="fab fa-github"></i></a>
-                            <a className="contacts-social-button" href="https://www.instagram.com/prajjawalsahu/"><i class="fab fa-instagram"></i></a>
+                            <a className="contacts-social-button" href="mailto:prajjawalsahu2001@gmail.com"><i className="fas fa-envelope"></i></a>
+                            <a className="contacts-social-button" href="https://github.com/PrajjawalSahu"><i className="fab fa-github"></i></a>
+                            <a className="contacts-social-button" href="https://www.instagram.com/prajjawalsahu/"><i className="fab fa-instagram"></i></a>
                             
                             </div>
                         </Col>

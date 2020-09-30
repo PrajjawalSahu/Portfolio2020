@@ -15,7 +15,7 @@ export default class Homei extends Component {
                 {/* <Jumbotron> */}
                     <h2>Welcome to My first website</h2>
                     <p>paragraph<br></br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi odio quaerat inventore expedita quia tempore ullam, laborum cupiditate sit hic omnis in illum natus eligendi rem nihil, nam voluptatum ratione.</p>
-                    <Link to="/home">
+                    <Link to="/Portfolio2020/home">
                     <Button variant="primary">button</Button>{' '}
                     </Link>
 

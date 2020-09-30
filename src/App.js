@@ -12,8 +12,8 @@ function App() {
     <Router>
       <div>
         {/* <Navbar></Navbar> */}
-        <Route exact path="/" component={Homei} />
-        <Route path="/home" component={Home} />
+        <Route exact path="/Portfolio2020" component={Homei} />
+        <Route path="/Portfolio2020/home" component={Home} />
         {/* <Route path="/" component={} /> */}
         {/* <Home></Home> */}
         {/* <Homei></Homei> */}
