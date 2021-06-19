@@ -14,8 +14,8 @@ export default class MyNavbar extends Component {
                         {/* <Nav.Link  className="px-5 custom-css-nav" href="/">Homei</Nav.Link> */}
                         {/* <Nav.Link  className="px-5 custom-css-nav" href="/home">Home</Nav.Link> */}
                         <Nav.Link  className="px-5 custom-css-nav" href="#projects-section">Projects</Nav.Link>
-                        <Nav.Link  className="px-5 custom-css-nav" href="/home#about-section">About</Nav.Link>
-                        <Nav.Link  className="px-5 custom-css-nav" href="/home#contacts-section">Contact</Nav.Link>
+                        {/* <Nav.Link  className="px-5 custom-css-nav" href="#about-section">About</Nav.Link> */}
+                        <Nav.Link  className="px-5 custom-css-nav" href="#contacts-section">Contact</Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

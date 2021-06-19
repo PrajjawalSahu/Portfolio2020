@@ -4,8 +4,9 @@ import { Container, Row, Col, OverlayTrigger, Tooltip, Button} from 'react-boots
 import MyNavbar from './MyNavbar';
 import './Home.css';
 
-import Scrollbar from 'smooth-scrollbar';
 import Goo from 'gooey-react';
+
+// import Scrollbar from 'smooth-scrollbar';
 import Draggable from "react-draggable";
 // import {asmeimg1} from "/assets/asme-home.png"
 
@@ -22,7 +23,7 @@ export default class Home extends Component {
         var options = {
             'damping': 0.08
         }
-        Scrollbar.init(document.querySelector('#page-home-id'), options);
+        // Scrollbar.init(document.querySelector('#page-home-id'), options);
 
 
 
@@ -94,50 +95,51 @@ export default class Home extends Component {
                 {/* <Scrollbar></Scrollbar> */}
 
 
-                <MyNavbar></MyNavbar>
-                <Container className="first-page-text ">
-                    {/* <Jumbotron> */}
-                    <Row className="" >
-                        <Col className="" xs={12} lg={8}>
-                            <Row className="tempo"><h1 className="hi"> Yooo! I am</h1></Row>
-                            {/* <br></br> */}
-                            <Row><h1 className="prajjawalsahu">Prajjawal Sahu</h1></Row>
-                            {/* <p>I am a Web Developer and Web Designer</p> */}
-                            <Row>
-                                {/* <div className="myButton"> */}
-
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-                                    <defs>
-                                        <filter id="goo">
-                                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                                            <feBlend in="SourceGraphic" in2="goo" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                                <Link to='#projects-section'>
-                                <button className="my-button" >
-                                    My Work
-                                        <span className="my-button-container">
-                                        <span className="my-button-bg"></span>
-                                        <span className="cursor-effect-on-my-button cursor"></span>
-                                    </span>
-                                </button>
-                                </Link>
-                                
-                                {/* </div> */}
-                            </Row>
-                        </Col>
-
-                    </Row>
-
-                    {/* </Jumbotron> */}
-                </Container>
+                
 
 
 
-                <Container>
+                <Container className="full-width">
                     <div className="major-row-1">
+                        <MyNavbar></MyNavbar>
+                        {/* <Jumbotron> */}
+                        {/* <Row className="" >
+                            <Col className="" xs={12} lg={8}> */}
+                            <Container className="first-page-text ">
+                                <Row className="mobile-extra-space tempo"><h1 className="hi"> Yooo! I am</h1></Row>
+                                {/* <br></br> */}
+                                <Row className="mobile-extra-space"><h1 className="prajjawalsahu">Prajjawal Sahu</h1></Row>
+                                {/* <p>I am a Web Developer and Web Designer</p> */}
+                                <Row className="mobile-extra-space">
+                                    {/* <div className="myButton"> */}
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
+                                        <defs>
+                                            <filter id="goo">
+                                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                                <feBlend in="SourceGraphic" in2="goo" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    <a href="#projects-section">
+                                    <button className="my-button" >
+                                        My Work
+                                            <span className="my-button-container">
+                                            <span className="my-button-bg"></span>
+                                            <span className="cursor-effect-on-my-button cursor"></span>
+                                        </span>
+                                    </button>
+                                    </a>
+                                    
+                                    {/* </div> */}
+                                </Row>
+                            </Container>
+                            {/* </Col>
+
+                        </Row> */}
+
+                        {/* </Jumbotron> */}
                         <svg className="boy-with-hanging-leg big-screen" viewBox="0 0 1920 789" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Frame" clipPath="url(#clip0)">
                                 <g id="wall">
@@ -321,8 +323,8 @@ export default class Home extends Component {
                 </Container>
 
 
-                <Container fluid>
-                    <Row className="major-row-2" id="projects-section" fluid>
+                <Container xs={12} className="full-width">
+                    <Row className="major-row-2" id="projects-section">
                         {/* <Col className=" ">
                             <Goo>
                                 <svg className="gooey" width="192" height="192">
@@ -355,20 +357,23 @@ export default class Home extends Component {
                                 </div>
                             </Draggable>
                         </Col> */}
-                        <Col sm={4} lg={6} className="m-0 p-0" fluid>
-                        <Row className="work-and-about-big-heading">
-                        <h3  className="text-align-center">Projects</h3>
-                        </Row>
+                        <Col fluid xs={12} sm={12} lg={6} >
+                        <div className="sticky-parent ">
+                        <div className="work-and-about-big-heading is-sticky">
+                        <h3  className="text-align-center ">Projects</h3>
+                        </div>
+                        </div>
+                        
                         </Col>
-                        <Col sm={8} lg={6} className="m-0 p-0" fluid>
+                        <Col xs={12} sm={12}  lg={6} className="" >
                         {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo optio ab id non explicabo blanditiis accusantium excepturi in, eum, eius rem quas labore. Nam mollitia quas cupiditate eos dolorum labore velit et animi! Necessitatibus, temporibus hic? Eos doloremque rerum quam cumque sed, consequatur fuga iste necessitatibus, voluptas assumenda dolor. Illum libero laborum dolor, eligendi dolorem non eum sint hic eveniet, qui doloremque! Optio ut iusto, ab officia amet corporis nemo voluptatibus cumque aspernatur tempora? Voluptates deleniti eveniet, nulla harum praesentium, id expedita dignissimos consequuntur officiis, dolores a nihil commodi porro. Optio dolore porro sit nisi maxime, sed esse iure consectetur doloribus, omnis similique odit architecto, aspernatur magnam aliquam cupiditate. Sit distinctio, commodi ex fugiat molestias dignissimos nemo iste! Sed explicabo voluptatem, unde aperiam temporibus quaerat praesentium eos eligendi minima, quisquam hic aliquam placeat nemo illo eveniet ad veniam ea. Culpa dolores eum molestias, officiis quo molestiae quis praesentium, similique necessitatibus obcaecati nulla optio, sint vero ab corrupti incidunt perspiciatis at. Cupiditate facere quibusdam fugit hic perspiciatis obcaecati doloremque consequatur autem perferendis suscipit, delectus tempore in voluptate culpa vitae officiis ex provident illo labore! Quaerat non, amet dolor hic adipisci beatae illo minima aut aliquid magni, vel laudantium quas earum a possimus rerum atque animi ipsam totam. Quasi suscipit, consequatur odio similique dolorum consequuntur blanditiis quaerat repellendus, ducimus sit quos, autem excepturi sed iusto nulla? Praesentium, ratione veniam. Voluptate mollitia fugiat cumque neque, nobis praesentium, necessitatibus quia odio autem quasi voluptatibus incidunt eligendi voluptatum aperiam explicabo doloribus error illum perspiciatis id. Quaerat porro eligendi qui molestias ratione? Rem, iure. Minus quidem, culpa aliquam eos error, deleniti ratione dicta atque consectetur hic adipisci modi labore porro! Assumenda blanditiis natus architecto eligendi nulla explicabo error nesciunt vel iusto harum? Quos dicta incidunt, at quae mollitia impedit fugiat laboriosam facilis numquam perferendis quidem deleniti. Vitae amet, totam officiis itaque quisquam aperiam sapiente ratione vel minus ad quae assumenda laborum perspiciatis tempore velit iste voluptatum quaerat et. Neque qui, nisi id architecto impedit modi culpa tenetur amet, voluptatem quod repellendus laborum soluta, delectus perspiciatis aliquid! Et a error ea expedita consequatur necessitatibus, tempore magnam laudantium nostrum nemo, voluptatem nam fugit labore aut in ipsum quo saepe dolorem distinctio! Necessitatibus molestias iste similique hic rerum delectus voluptatum magnam. Voluptatibus velit suscipit quam ab porro fuga tempora iure exercitationem ex autem similique saepe accusamus vel quaerat, commodi non, voluptas molestias voluptatem alias omnis. Dolorum, asperiores perspiciatis. Incidunt quod reprehenderit quia rerum corrupti eaque aut, ipsa obcaecati, vitae neque ducimus magnam deserunt veniam in nobis architecto omnis maiores fuga tenetur pariatur officia sed quisquam. Eius architecto culpa excepturi, iste possimus repellendus quae, veniam non maiores, voluptatum ea. Dolorum, dicta. Voluptates cupiditate accusamus sit magnam vel ratione cumque ab quam odio quibusdam ullam expedita nulla sed mollitia excepturi quos natus, vitae nemo illum commodi. Dolorum distinctio iste eligendi cupiditate similique eos architecto ullam dolores ratione odio accusamus nisi perspiciatis molestiae non sapiente, praesentium pariatur dolore! Beatae possimus, maxime praesentium accusantium natus inventore voluptatibus quisquam. Maiores eum eligendi optio recusandae!</p> */}
                         <div className="project-container">
                             <div className="project-card">
                                 <div className="project-image-box">
                                 {/* <img loading="lazy" className="img2" src="/assets/asme-contact-us.png" alt="asme contact us section screenshot"/> */}
-                                    <img loading="lazy" className="img2" src="https://freeimage.host/i/2EEF3v" alt="asme contact us section screenshot"/>
+                                    <img loading="lazy" className="img2" src="https://iili.io/2EEF3v.png" alt="asme contact us section screenshot"/>
                                     {/* <img loading="lazy" className="img1" src="/assets/asme-home.png" alt="asme home section screenshot"/> */}
-                                    <img loading="lazy" className="img1" src="https://freeimage.host/i/2EE26J" alt="asme home section screenshot"/>
+                                    <img loading="lazy" className="img1" src="https://iili.io/2EE26J.png" alt="asme home section screenshot"/>
                                 </div>
                                 <div className="project-content">
                                 <div className="top">
@@ -400,15 +405,13 @@ export default class Home extends Component {
                                 </div>
                                 <div className="project-content">
                                 <div className="top">
-                                    {/* <button className="project-my-role">Game Concept  </button> */}
-                                    <button className="project-my-role">Front-end developement  </button>
+                                    <button className="project-my-role">Game Concept </button>
+                                    <button className="project-my-role">Front-end developement</button>
                                 </div>
                                     <div className="project-card-text">
                                         <h3><strong className="asme"></strong><br></br>Google Game Jam 2020</h3>
-                                        {/* <p>A fully fuctional website for american society of mechanical engineers (ASME) IIT Roorkee chapter</p> */}
                                         <div className="project-buttons">
                                             <a className="project-button" href="https://github.com/PrajjawalSahu/ggj2020/"><i className="fab fa-github"></i></a>
-                                            {/* <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020" ><i >go to website</i></a> */}
                                             
                                         </div>
                                     </div>
@@ -421,10 +424,10 @@ export default class Home extends Component {
                 </Container>
 
 
-                <Container>
+                <Container className="full-width">
                     <Row className="major-row-3">
-                    <Col sm={4} lg={6} className="major-row-3-left">
-                    <Row className="work-and-about-big-heading">
+                    <Col sm={4} lg={6} className="major-row-3-left" >
+                    <Row className="work-and-about-big-heading" >
                             <h3 className="text-align-center" id="contact-heading">Contact</h3>
                         </Row>
                             <div  className="sticky">
@@ -482,7 +485,7 @@ export default class Home extends Component {
                             <br></br>
                             <a className="email" href="mailto:prajjawalsahu2001@gmail.com">prajjawalsahu2001@gmail.com</a>
                             </p>
-                            <div className="contact-social project-buttons">
+                            <div className="contact-social project-buttons"  id="contacts-section">
                             <a className="contacts-social-button" href="mailto:prajjawalsahu2001@gmail.com"><i className="fas fa-envelope"></i></a>
                             <a className="contacts-social-button" href="https://github.com/PrajjawalSahu"><i className="fab fa-github"></i></a>
                             <a className="contacts-social-button" href="https://www.instagram.com/prajjawalsahu/"><i className="fab fa-instagram"></i></a>
@@ -500,6 +503,19 @@ export default class Home extends Component {
                                 </svg>
                             </Goo>
                 </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             </div>
