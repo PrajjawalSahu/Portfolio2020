@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap');
-*{
-    /* color: #FF7466; */
-}
+
 .nav-brand{
     font-family: 'Montserrat';
+}
+.custom-css-nav-component{
+    /* border: #FF7466 1px solid; */
+    background-color: transparent;
+    /* position: absolute; */
+    height: 50px;
+    padding-top: 20px;
 }
 .custom-css-nav{
     /* color: white !important; */
@@ -11,11 +16,11 @@
     /* background-color: white; */
     color: #e6e6e6 !important;
     /* border: #011832 solid 1px ; */
-    position:  relative;
+    /* position:  relative; */
     transition: 300ms ease-in;
 }
 .custom-css-nav::after{
-    position: absolute;
+    /* position: absolute;
     content: '';
     left: 0;
     bottom: 0;
@@ -25,11 +30,11 @@
     background-color: #FF7466;
     transform: scaleX(0);
     transform-origin: 50%;
-    transition: 300ms ease-in;
+    transition: 300ms ease-in; */
 }
 .custom-css-nav:hover::after{
-    transform: scaleX(0.5);
-    transform-origin: 50%;
+    /* transform: scaleX(0.5); */
+    /* transform-origin: 50%; */
 }
 .custom-css-nav:hover{
     color: #FF7466 !important;

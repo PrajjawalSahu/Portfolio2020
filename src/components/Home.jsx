@@ -1,90 +1,48 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, OverlayTrigger, Tooltip, Button} from 'react-bootstrap';
+import { Container, Row, Col, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import MyNavbar from './MyNavbar';
 import './Home.css';
-
 import Goo from 'gooey-react';
-
-// import Scrollbar from 'smooth-scrollbar';
 import Draggable from "react-draggable";
-// import {asmeimg1} from "/assets/asme-home.png"
-
-
-// import kursor from "kursor";
-
-// import "kursor/dist/kursor.css";
-// import $ from 'jquery';
-
-
 
 export default class Home extends Component {
     componentDidMount() {
         var options = {
-            'damping': 0.08
+            // 'damping': 0.08
         }
-        // Scrollbar.init(document.querySelector('#page-home-id'), options);
-
-
-
 
         let mouseCursor = document.querySelector('.cursor');
         let buttonContainer = document.querySelector('.my-button');
-        buttonContainer.addEventListener('mousemove',cursor);
+        buttonContainer.addEventListener('mousemove', cursor);
 
-        function cursor(e){
-            // console.log(e);
-            
-            mouseCursor.style.top = e.pageY + "px" + "%" ;
-            mouseCursor.style.left = e.pageX + "px" ;
+        function cursor(e) {
+            mouseCursor.style.top = e.pageY + "px" + "%";
+            mouseCursor.style.left = e.pageX + "px";
         }
-        buttonContainer.addEventListener('mouseover' , () => {mouseCursor.classList.add("cursor-grow")});
-        buttonContainer.addEventListener('mouseleave' , () => {mouseCursor.classList.remove("cursor-grow")});
-        buttonContainer.addEventListener('mouseleave' , () => {mouseCursor.classList.add("visibility-hidden-class")});
-        buttonContainer.addEventListener('mouseover' , () => {mouseCursor.classList.remove("visibility-hidden-class")});
-
-
-        
-
-        // let techLogo = document.querySelector('.project-my-role');
-        // function animateTechUsed(){
-        //     techLogo.classList.add("animate-tech-used");
-        // }
-
-
-        // new kursor({
-        //     // el: '.major-row-1',
-        //     type: 2,  /* 1 | 2 | 3 | 4 | 5 */
-        //     // removeDefaultCursor: true
-        //   });
-        // $(function () {
-        //     $(".gooey circle").draggable();
-        // })
+        buttonContainer.addEventListener('mouseover', () => { mouseCursor.classList.add("cursor-grow") });
+        buttonContainer.addEventListener('mouseleave', () => { mouseCursor.classList.remove("cursor-grow") });
+        buttonContainer.addEventListener('mouseleave', () => { mouseCursor.classList.add("visibility-hidden-class") });
+        buttonContainer.addEventListener('mouseover', () => { mouseCursor.classList.remove("visibility-hidden-class") });
 
 
         let gooeyBgContainer = document.getElementById('gooey-bg-container');
         let count = 8;
-        for ( let i = 0 ; i<8 ; i++ )
-        {
+        for (let i = 0; i < 8; i++) {
             let gooeyCirclesForGooeyBg = document.createElement('div')
-            gooeyCirclesForGooeyBg.className = 'gooey-bg-box' ;
+            gooeyCirclesForGooeyBg.className = 'gooey-bg-box';
             gooeyBgContainer.appendChild(gooeyCirclesForGooeyBg);
         }
 
-        setInterval(function(){
+        setInterval(function () {
             let gooeyBgDiv = document.getElementsByClassName('gooey-bg-box');
-            for (let i = 0 ; i < gooeyBgDiv.length; i++)
-            {
-                gooeyBgDiv[i].style.left=Math.floor(Math.random()*50) + '%';
-                gooeyBgDiv[i].style.top=Math.floor(Math.random()*50) + '%';
-    
+            for (let i = 0; i < gooeyBgDiv.length; i++) {
+                gooeyBgDiv[i].style.left = Math.floor(Math.random() * 50) + '%';
+                gooeyBgDiv[i].style.top = Math.floor(Math.random() * 50) + '%';
+
             }
-        },2000)
+        }, 2000)
 
-
-
-        // const lengthofpath = document.querySelectorAll('#main-building path:nth-child(1) ')
-        // lengthofpath.getTotalLength();
 
 
     }
@@ -92,54 +50,47 @@ export default class Home extends Component {
     render() {
         return (
             <div className="page-home" id="page-home-id">
-                {/* <Scrollbar></Scrollbar> */}
-
-
-                
-
-
 
                 <Container className="full-width">
                     <div className="major-row-1">
                         <MyNavbar></MyNavbar>
-                        {/* <Jumbotron> */}
-                        {/* <Row className="" >
-                            <Col className="" xs={12} lg={8}> */}
-                            <Container className="first-page-text ">
-                                <Row className="mobile-extra-space tempo"><h1 className="hi"> Yooo! I am</h1></Row>
-                                {/* <br></br> */}
-                                <Row className="mobile-extra-space"><h1 className="prajjawalsahu">Prajjawal Sahu</h1></Row>
-                                {/* <p>I am a Web Developer and Web Designer</p> */}
-                                <Row className="mobile-extra-space">
-                                    {/* <div className="myButton"> */}
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-                                        <defs>
-                                            <filter id="goo">
-                                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                                                <feBlend in="SourceGraphic" in2="goo" />
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                    <a href="#projects-section">
+                        <Container className="first-page-text ">
+                            <Row className="mobile-extra-space tempo"><h1 className="hi">Hello, I am </h1></Row>
+                            <Row className="mobile-extra-space"><h1 className="prajjawalsahu"><span className="prajjawal-specifically">Prajjawal</span></h1></Row>
+                            <Row className="mobile-extra-space"><p className="hero-section-description">A design minded front-end developer who loves to build <br></br> high performance websites</p></Row>
+                            
+                            <Row className="mobile-extra-space">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
+                                    <defs>
+                                        <filter id="goo">
+                                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                            <feBlend in="SourceGraphic" in2="goo" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <a href="#projects-section">
                                     <button className="my-button" >
                                         My Work
-                                            <span className="my-button-container">
+                                        <span className="my-button-container">
                                             <span className="my-button-bg"></span>
                                             <span className="cursor-effect-on-my-button cursor"></span>
                                         </span>
                                     </button>
-                                    </a>
-                                    
-                                    {/* </div> */}
-                                </Row>
-                            </Container>
-                            {/* </Col>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1DoW-HRNA45xoltsfrNyJutdBCr6bZnuY/view?usp=sharing" target="blank">
+                                    <button className="button-resume">
+                                        Resume
+                                    </button>
+                                </a>
+                            </Row>
+                        </Container>
 
-                        </Row> */}
 
-                        {/* </Jumbotron> */}
+
                         <svg className="boy-with-hanging-leg big-screen" viewBox="0 0 1920 789" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Frame" clipPath="url(#clip0)">
                                 <g id="wall">
@@ -229,7 +180,7 @@ export default class Home extends Component {
                             </defs>
                         </svg>
 
-                        {/* break */}
+
 
                         {/* <svg className="boy-with-hanging-leg small-screen" viewBox="960 0 1920 789" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Frame" clipPath="url(#clip0)">
@@ -358,67 +309,66 @@ export default class Home extends Component {
                             </Draggable>
                         </Col> */}
                         <Col fluid xs={12} sm={12} lg={6} >
-                        <div className="sticky-parent ">
-                        <div className="work-and-about-big-heading is-sticky">
-                        <h3  className="text-align-center ">Projects</h3>
-                        </div>
-                        </div>
-                        
+                            <div className="sticky-parent ">
+                                <div className="work-and-about-big-heading is-sticky">
+                                    <h3 className="text-align-center ">Projects</h3>
+                                </div>
+                            </div>
+
                         </Col>
-                        <Col xs={12} sm={12}  lg={6} className="" >
-                        {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo optio ab id non explicabo blanditiis accusantium excepturi in, eum, eius rem quas labore. Nam mollitia quas cupiditate eos dolorum labore velit et animi! Necessitatibus, temporibus hic? Eos doloremque rerum quam cumque sed, consequatur fuga iste necessitatibus, voluptas assumenda dolor. Illum libero laborum dolor, eligendi dolorem non eum sint hic eveniet, qui doloremque! Optio ut iusto, ab officia amet corporis nemo voluptatibus cumque aspernatur tempora? Voluptates deleniti eveniet, nulla harum praesentium, id expedita dignissimos consequuntur officiis, dolores a nihil commodi porro. Optio dolore porro sit nisi maxime, sed esse iure consectetur doloribus, omnis similique odit architecto, aspernatur magnam aliquam cupiditate. Sit distinctio, commodi ex fugiat molestias dignissimos nemo iste! Sed explicabo voluptatem, unde aperiam temporibus quaerat praesentium eos eligendi minima, quisquam hic aliquam placeat nemo illo eveniet ad veniam ea. Culpa dolores eum molestias, officiis quo molestiae quis praesentium, similique necessitatibus obcaecati nulla optio, sint vero ab corrupti incidunt perspiciatis at. Cupiditate facere quibusdam fugit hic perspiciatis obcaecati doloremque consequatur autem perferendis suscipit, delectus tempore in voluptate culpa vitae officiis ex provident illo labore! Quaerat non, amet dolor hic adipisci beatae illo minima aut aliquid magni, vel laudantium quas earum a possimus rerum atque animi ipsam totam. Quasi suscipit, consequatur odio similique dolorum consequuntur blanditiis quaerat repellendus, ducimus sit quos, autem excepturi sed iusto nulla? Praesentium, ratione veniam. Voluptate mollitia fugiat cumque neque, nobis praesentium, necessitatibus quia odio autem quasi voluptatibus incidunt eligendi voluptatum aperiam explicabo doloribus error illum perspiciatis id. Quaerat porro eligendi qui molestias ratione? Rem, iure. Minus quidem, culpa aliquam eos error, deleniti ratione dicta atque consectetur hic adipisci modi labore porro! Assumenda blanditiis natus architecto eligendi nulla explicabo error nesciunt vel iusto harum? Quos dicta incidunt, at quae mollitia impedit fugiat laboriosam facilis numquam perferendis quidem deleniti. Vitae amet, totam officiis itaque quisquam aperiam sapiente ratione vel minus ad quae assumenda laborum perspiciatis tempore velit iste voluptatum quaerat et. Neque qui, nisi id architecto impedit modi culpa tenetur amet, voluptatem quod repellendus laborum soluta, delectus perspiciatis aliquid! Et a error ea expedita consequatur necessitatibus, tempore magnam laudantium nostrum nemo, voluptatem nam fugit labore aut in ipsum quo saepe dolorem distinctio! Necessitatibus molestias iste similique hic rerum delectus voluptatum magnam. Voluptatibus velit suscipit quam ab porro fuga tempora iure exercitationem ex autem similique saepe accusamus vel quaerat, commodi non, voluptas molestias voluptatem alias omnis. Dolorum, asperiores perspiciatis. Incidunt quod reprehenderit quia rerum corrupti eaque aut, ipsa obcaecati, vitae neque ducimus magnam deserunt veniam in nobis architecto omnis maiores fuga tenetur pariatur officia sed quisquam. Eius architecto culpa excepturi, iste possimus repellendus quae, veniam non maiores, voluptatum ea. Dolorum, dicta. Voluptates cupiditate accusamus sit magnam vel ratione cumque ab quam odio quibusdam ullam expedita nulla sed mollitia excepturi quos natus, vitae nemo illum commodi. Dolorum distinctio iste eligendi cupiditate similique eos architecto ullam dolores ratione odio accusamus nisi perspiciatis molestiae non sapiente, praesentium pariatur dolore! Beatae possimus, maxime praesentium accusantium natus inventore voluptatibus quisquam. Maiores eum eligendi optio recusandae!</p> */}
-                        <div className="project-container">
-                            <div className="project-card">
-                                <div className="project-image-box">
-                                {/* <img loading="lazy" className="img2" src="/assets/asme-contact-us.png" alt="asme contact us section screenshot"/> */}
-                                    <img loading="lazy" className="img2" src="https://iili.io/2EEF3v.png" alt="asme contact us section screenshot"/>
-                                    {/* <img loading="lazy" className="img1" src="/assets/asme-home.png" alt="asme home section screenshot"/> */}
-                                    <img loading="lazy" className="img1" src="https://iili.io/2EE26J.png" alt="asme home section screenshot"/>
-                                </div>
-                                <div className="project-content">
-                                <div className="top">
-                                    <i className="project-tech-used fab fa-react"></i>
-                                    <button  className="project-my-role">Front-end developement  </button>
-                                </div>
-                                    <div className="project-card-text">
-                                        <h3><strong className="asme"></strong><br></br>ASME IIT Roorkee Chapter</h3>
-                                        {/* <p>A fully fuctional website for american society of mechanical engineers (ASME) IIT Roorkee chapter</p> */}
-                                        <div className="project-buttons">
-                                            <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020"><i className="fab fa-github"></i></a>
-                                            {/* <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020" ><i >go to website</i></a> */}
-                                            <OverlayTrigger overlay={<Tooltip id="tooltip tooltip-disabled">Coming Soon...</Tooltip>}>
-                                            <span className="d-inline-block">
-                                                <Button className=" view-live" disabled style={{ pointerEvents: 'none' }}>
-                                                View Live
-                                                </Button>
-                                            </span>
-                                            </OverlayTrigger>
+                        <Col xs={12} sm={12} lg={6} className="" >
+                            <div className="project-container">
+                                <div className="project-card">
+                                    <div className="project-image-box">
+                                        {/* <img loading="lazy" className="img2" src="/assets/asme-contact-us.png" alt="asme contact us section screenshot"/> */}
+                                        <img loading="lazy" className="img2" src="https://iili.io/2EEF3v.png" alt="asme contact us section screenshot" />
+                                        {/* <img loading="lazy" className="img1" src="/assets/asme-home.png" alt="asme home section screenshot"/> */}
+                                        <img loading="lazy" className="img1" src="https://iili.io/2EE26J.png" alt="asme home section screenshot" />
+                                    </div>
+                                    <div className="project-content">
+                                        <div className="top">
+                                            <i className="project-tech-used fab fa-react"></i>
+                                            <button className="project-my-role">Front-end developement  </button>
+                                        </div>
+                                        <div className="project-card-text">
+                                            <h3><strong className="asme"></strong><br></br>ASME IIT Roorkee Chapter</h3>
+                                            {/* <p>A fully fuctional website for american society of mechanical engineers (ASME) IIT Roorkee chapter</p> */}
+                                            <div className="project-buttons">
+                                                <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020"><i className="fab fa-github"></i></a>
+                                                {/* <a className="project-button" href="https://github.com/PrajjawalSahu/ASME-Website2020" ><i >go to website</i></a> */}
+                                                <OverlayTrigger overlay={<Tooltip id="tooltip tooltip-disabled">Coming Soon...</Tooltip>}>
+                                                    <span className="d-inline-block">
+                                                        <Button className=" view-live" disabled style={{ pointerEvents: 'none' }}>
+                                                            View Live
+                                                        </Button>
+                                                    </span>
+                                                </OverlayTrigger>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className="project-card">
-                                <div className="project-image-box">
-                                    <img loading="lazy" className="" id="ggj-img" src="https://globalgamejam.org/sites/default/files/styles/responsive_large__wide/public/field_news_story_image_video/2019/10/ggj20_news_708x432px.jpg?itok=0W9xNPu7&timestamp=1569945916" alt="asme contact us section screenshot"/>
-                                    {/* <img loading="lazy" className="img1" src="https://globalgamejam.org/sites/default/files/styles/responsive_large__wide/public/field_news_story_image_video/2019/10/ggj20_news_708x432px.jpg?itok=0W9xNPu7&timestamp=1569945916" alt="asme home section screenshot"/> */}
-                                </div>
-                                <div className="project-content">
-                                <div className="top">
-                                    <button className="project-my-role">Game Concept </button>
-                                    <button className="project-my-role">Front-end developement</button>
-                                </div>
-                                    <div className="project-card-text">
-                                        <h3><strong className="asme"></strong><br></br>Google Game Jam 2020</h3>
-                                        <div className="project-buttons">
-                                            <a className="project-button" href="https://github.com/PrajjawalSahu/ggj2020/"><i className="fab fa-github"></i></a>
-                                            
+                                <div className="project-card">
+                                    <div className="project-image-box">
+                                        <img loading="lazy" className="" id="ggj-img" src="https://globalgamejam.org/sites/default/files/styles/responsive_large__wide/public/field_news_story_image_video/2019/10/ggj20_news_708x432px.jpg?itok=0W9xNPu7&timestamp=1569945916" alt="asme contact us section screenshot" />
+                                        {/* <img loading="lazy" className="img1" src="https://globalgamejam.org/sites/default/files/styles/responsive_large__wide/public/field_news_story_image_video/2019/10/ggj20_news_708x432px.jpg?itok=0W9xNPu7&timestamp=1569945916" alt="asme home section screenshot"/> */}
+                                    </div>
+                                    <div className="project-content">
+                                        <div className="top">
+                                            <button className="project-my-role">Game Concept </button>
+                                            <button className="project-my-role">Front-end developement</button>
+                                        </div>
+                                        <div className="project-card-text">
+                                            <h3><strong className="asme"></strong><br></br>Google Game Jam 2020</h3>
+                                            <div className="project-buttons">
+                                                <a className="project-button" href="https://github.com/PrajjawalSahu/ggj2020/"><i className="fab fa-github"></i></a>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
@@ -426,70 +376,71 @@ export default class Home extends Component {
 
                 <Container className="full-width">
                     <Row className="major-row-3">
-                    <Col sm={4} lg={6} className="major-row-3-left" >
-                    <Row className="work-and-about-big-heading" >
-                            <h3 className="text-align-center" id="contact-heading">Contact</h3>
-                        </Row>
-                            <div  className="sticky">
-                            {/* <Draggable> */}
-                            <Goo intensity="strong" >
-                                <Col className=" my-gooey-container" id="gooey-bg-container">
-                                {/* <span className="my-gooey-container"></span>
+                        <Col sm={4} lg={6} className="major-row-3-left" >
+                            <Row className="work-and-about-big-heading" >
+                                <h3 className="text-align-center" id="contact-heading">Contact</h3>
+                            </Row>
+                            <div className="sticky">
+                                {/* <Draggable> */}
+                                <Goo intensity="strong" >
+                                    <Col className=" my-gooey-container" id="gooey-bg-container">
+                                        {/* <span className="my-gooey-container"></span>
                                 <span className="gooey-bg"></span> */}
-                                </Col>
-                            </Goo>
-                            {/* </Draggable> */}
-                            <svg className="" id="main-building" viewBox="0 0 501 426" fill="none" xmlns="http://www.w3.org/2000/svg">
-{/* <rect x="196.5" y="167.5" width="108" height="11" stroke="white"/> */}
-<path d="M286.752 99.0863H287.252V98.5863V96.9311C319.018 110.103 342.157 139.822 345.86 175.336H304.541V167.82V167.32H304.041H196.938H196.438V167.82V175.336H155.118C158.822 139.844 181.961 110.125 213.726 96.9316V98.5863V99.0863H214.226H286.752Z" stroke="#e6e6e6"/>
-<path d="M279.027 46.3068V45.4564H284.942V56.6312H216.037V45.4564H221.952V46.3068V46.8068H222.452H278.527H279.027V46.3068Z" stroke="#e6e6e6"/>
-<path d="M278.027 56.6312V81.8885H265.674C266.896 79.5442 267.58 76.877 267.58 74.0504C267.58 64.6204 259.924 57.003 250.5 57.003C241.055 57.003 233.399 64.62 233.399 74.0504C233.399 76.8798 234.101 79.5467 235.31 81.8885H222.952V56.6312H278.027Z" stroke="#e6e6e6"/>
-<path d="M214.726 90.6552H286.252V99.0863H214.726V90.6552Z" stroke="#e6e6e6"/>
-<path d="M263.065 85.6012L263.065 85.6009C263.841 84.7652 264.522 83.8551 265.109 82.8885H282.902V90.6552H254.374C257.762 89.8674 260.769 88.0699 263.065 85.6012ZM237.935 85.6004C240.215 88.0701 243.218 89.8674 246.613 90.6552H218.098V82.8885H235.874C236.476 83.8529 237.157 84.7632 237.935 85.6004Z" stroke="#e6e6e6"/>
-<path d="M222.952 40.4333H278.027V46.8068H222.952V40.4333Z" stroke="#e6e6e6"/>
-<path d="M256.702 23.0244C264.919 25.3002 271.329 32.0252 273.107 40.4333H227.893C229.67 32.0247 236.06 25.3002 244.298 23.0245C246.274 22.4789 248.355 22.1851 250.5 22.1851C252.645 22.1851 254.726 22.4789 256.702 23.0244Z" stroke="#e6e6e6"/>
-<path d="M256.4 22.6851C256.4 22.7616 256.398 22.8363 256.395 22.9098C254.506 22.4376 252.53 22.1851 250.5 22.1851C248.47 22.1851 246.494 22.4376 244.605 22.9098C244.602 22.8363 244.6 22.7616 244.6 22.6851C244.6 20.0993 246.238 17.9273 248.555 17.1146C249.176 16.9152 249.831 16.7976 250.5 16.7976C251.171 16.7976 251.825 16.9157 252.422 17.1138C254.742 17.9268 256.4 20.1011 256.4 22.6851Z" stroke="#e6e6e6"/>
-<path d="M252.083 0.5V16.981C251.578 16.864 251.045 16.7976 250.5 16.7976C249.949 16.7976 249.411 16.8655 248.895 16.9843V0.5H252.083Z" stroke="#e6e6e6"/>
-<path d="M259.43 82.0511L259.43 82.051L259.423 82.0588C258.417 83.2066 257.182 84.1319 255.799 84.812L255.799 84.8119L255.794 84.8145C254.212 85.6139 252.4 86.0468 250.5 86.0468C248.6 86.0468 246.788 85.6139 245.206 84.8145L245.206 84.8144L245.201 84.812C243.818 84.1319 242.583 83.2066 241.577 82.0588L241.577 82.0588L241.57 82.0511C239.633 79.9332 238.479 77.1377 238.479 74.0504C238.479 67.4256 243.86 62.0541 250.5 62.0541C257.14 62.0541 262.521 67.4256 262.521 74.0504C262.521 77.1377 261.367 79.9332 259.43 82.0511Z" stroke="#e6e6e6"/>
-<path d="M263.123 85.6785L263.123 85.6784L263.117 85.6863C261.691 87.3622 259.943 88.7111 257.988 89.7015L257.988 89.7015L257.983 89.7041C255.745 90.87 253.183 91.5 250.5 91.5C247.817 91.5 245.255 90.87 243.017 89.7041L243.017 89.7041L243.012 89.7015C241.057 88.7111 239.309 87.3622 237.883 85.6863L237.883 85.6862L237.877 85.6785C235.135 82.589 233.5 78.5078 233.5 74C233.5 64.3211 241.124 56.5 250.5 56.5C259.876 56.5 267.5 64.3211 267.5 74C267.5 78.5078 265.865 82.589 263.123 85.6785Z" stroke="#e6e6e6"/>
-<path d="M304.541 177.773V175.336H487.249V183.832H13.7509V175.336H196.438V177.773V178.273H196.938H304.041H304.541V177.773Z" stroke="#e6e6e6"/>
-<path d="M0.5 216.205H500.5V224.701H0.5V216.205Z" stroke="#e6e6e6"/>
-<path d="M19.9576 183.832H481.021V216.205H19.9576V183.832Z" stroke="#e6e6e6"/>
-<path d="M279.993 259.818H306.912V265.998H279.993V259.818Z" stroke="#e6e6e6"/>
-<path d="M16.9817 260.318V261.147H16.1348V224.701H484.844V261.147H484.018V260.318V259.818H483.518H455.599H455.099V260.318V261.147H395.965V260.318V259.818H395.465H367.546H367.046V260.318V261.147H307.912V260.318V259.818H307.412H279.493H278.993V260.318V261.147H217.712V260.318V259.818H217.212H189.292H188.792V260.318V261.147H131.806V260.318V259.818H131.306H103.387H102.887V260.318V261.147H45.901V260.318V259.818H45.401H17.4817H16.9817V260.318Z" stroke="#e6e6e6"/>
-<path d="M17.9817 259.818H44.901V265.998H17.9817V259.818Z" stroke="#e6e6e6"/>
-<path d="M13.6435 413.632V411.86H15.3985H15.8985V411.36V409.674H17.1166H17.6166V409.174V405.859H19.5649H20.0566L20.0649 405.367L22.419 265.998H41.063L42.8178 405.365L42.824 405.859H43.3178H45.2661V409.174V409.674H45.7661H46.9842V411.36V411.86H47.4842H49.2392V413.632V414.132H49.7392H51.3224V425.5H11.5388V414.132H13.1435H13.6435V413.632Z" stroke="#e6e6e6"/>
-<path d="M103.887 259.818H130.806V265.998H103.887V259.818Z" stroke="#e6e6e6"/>
-<path d="M99.5489 413.632V411.86H101.304H101.804V411.36V409.674H103.022H103.522V409.174V405.859H105.47H105.962L105.97 405.367L108.324 265.998H126.968L128.723 405.365L128.729 405.859H129.223H131.171V409.174V409.674H131.671H132.89V411.36V411.86H133.39H135.145V413.632V414.132H135.645H137.228V425.5H97.4442V414.132H99.0489H99.5489V413.632Z" stroke="#e6e6e6"/>
-<path d="M189.792 259.818H216.712V265.998H189.792V259.818Z" stroke="#e6e6e6"/>
-<path d="M185.454 413.632V411.86H187.209H187.709V411.36V409.674H188.927H189.427V409.174V405.859H191.376H191.867L191.876 405.367L194.23 265.998H212.874L214.628 405.365L214.635 405.859H215.128H217.077V409.174V409.674H217.577H218.795V411.36V411.86H219.295H221.05V413.632V414.132H221.55H223.133V425.5H183.35V414.132H184.954H185.454V413.632Z" stroke="#e6e6e6"/>
-<path d="M275.655 413.632V411.86H277.41H277.91V411.36V409.674H279.128H279.628V409.174V405.859H281.576H282.068L282.076 405.367L284.43 265.998H303.074L304.829 405.365L304.835 405.859H305.329H307.277V409.174V409.674H307.777H308.996V411.36V411.86H309.496H311.251V413.632V414.132H311.751H313.334V425.5H273.55V414.132H275.155H275.655V413.632Z" stroke="#e6e6e6"/>
-<path d="M368.046 259.818H394.965V265.998H368.046V259.818Z" stroke="#e6e6e6"/>
-<path d="M363.708 413.632V411.86H365.463H365.963V411.36V409.674H367.181H367.681V409.174V405.859H369.629H370.121L370.129 405.367L372.483 265.998H391.127L392.882 405.365L392.888 405.859H393.382H395.33V409.174V409.674H395.83H397.048V411.36V411.86H397.548H399.304V413.632V414.132H399.804H401.387V425.5H361.603V414.132H363.208H363.708V413.632Z" stroke="#e6e6e6"/>
-<path d="M456.099 259.818H483.018V265.998H456.099V259.818Z" stroke="#e6e6e6"/>
-<path d="M451.761 413.632V411.86H453.516H454.016V411.36V409.674H455.234H455.734V409.174V405.859H457.682H458.174L458.182 405.367L460.536 265.998H479.18L480.935 405.365L480.941 405.859H481.435H483.383V409.174V409.674H483.883H485.101V411.36V411.86H485.601H487.356V413.632V414.132H487.856H489.44V425.5H449.656V414.132H451.261H451.761V413.632Z" stroke="#e6e6e6"/>
-</svg>
+                                    </Col>
+                                </Goo>
+                                {/* </Draggable> */}
+                                <svg className="" id="main-building" viewBox="0 0 501 426" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    {/* <rect x="196.5" y="167.5" width="108" height="11" stroke="white"/> */}
+                                    <path d="M286.752 99.0863H287.252V98.5863V96.9311C319.018 110.103 342.157 139.822 345.86 175.336H304.541V167.82V167.32H304.041H196.938H196.438V167.82V175.336H155.118C158.822 139.844 181.961 110.125 213.726 96.9316V98.5863V99.0863H214.226H286.752Z" stroke="#e6e6e6" />
+                                    <path d="M279.027 46.3068V45.4564H284.942V56.6312H216.037V45.4564H221.952V46.3068V46.8068H222.452H278.527H279.027V46.3068Z" stroke="#e6e6e6" />
+                                    <path d="M278.027 56.6312V81.8885H265.674C266.896 79.5442 267.58 76.877 267.58 74.0504C267.58 64.6204 259.924 57.003 250.5 57.003C241.055 57.003 233.399 64.62 233.399 74.0504C233.399 76.8798 234.101 79.5467 235.31 81.8885H222.952V56.6312H278.027Z" stroke="#e6e6e6" />
+                                    <path d="M214.726 90.6552H286.252V99.0863H214.726V90.6552Z" stroke="#e6e6e6" />
+                                    <path d="M263.065 85.6012L263.065 85.6009C263.841 84.7652 264.522 83.8551 265.109 82.8885H282.902V90.6552H254.374C257.762 89.8674 260.769 88.0699 263.065 85.6012ZM237.935 85.6004C240.215 88.0701 243.218 89.8674 246.613 90.6552H218.098V82.8885H235.874C236.476 83.8529 237.157 84.7632 237.935 85.6004Z" stroke="#e6e6e6" />
+                                    <path d="M222.952 40.4333H278.027V46.8068H222.952V40.4333Z" stroke="#e6e6e6" />
+                                    <path d="M256.702 23.0244C264.919 25.3002 271.329 32.0252 273.107 40.4333H227.893C229.67 32.0247 236.06 25.3002 244.298 23.0245C246.274 22.4789 248.355 22.1851 250.5 22.1851C252.645 22.1851 254.726 22.4789 256.702 23.0244Z" stroke="#e6e6e6" />
+                                    <path d="M256.4 22.6851C256.4 22.7616 256.398 22.8363 256.395 22.9098C254.506 22.4376 252.53 22.1851 250.5 22.1851C248.47 22.1851 246.494 22.4376 244.605 22.9098C244.602 22.8363 244.6 22.7616 244.6 22.6851C244.6 20.0993 246.238 17.9273 248.555 17.1146C249.176 16.9152 249.831 16.7976 250.5 16.7976C251.171 16.7976 251.825 16.9157 252.422 17.1138C254.742 17.9268 256.4 20.1011 256.4 22.6851Z" stroke="#e6e6e6" />
+                                    <path d="M252.083 0.5V16.981C251.578 16.864 251.045 16.7976 250.5 16.7976C249.949 16.7976 249.411 16.8655 248.895 16.9843V0.5H252.083Z" stroke="#e6e6e6" />
+                                    <path d="M259.43 82.0511L259.43 82.051L259.423 82.0588C258.417 83.2066 257.182 84.1319 255.799 84.812L255.799 84.8119L255.794 84.8145C254.212 85.6139 252.4 86.0468 250.5 86.0468C248.6 86.0468 246.788 85.6139 245.206 84.8145L245.206 84.8144L245.201 84.812C243.818 84.1319 242.583 83.2066 241.577 82.0588L241.577 82.0588L241.57 82.0511C239.633 79.9332 238.479 77.1377 238.479 74.0504C238.479 67.4256 243.86 62.0541 250.5 62.0541C257.14 62.0541 262.521 67.4256 262.521 74.0504C262.521 77.1377 261.367 79.9332 259.43 82.0511Z" stroke="#e6e6e6" />
+                                    <path d="M263.123 85.6785L263.123 85.6784L263.117 85.6863C261.691 87.3622 259.943 88.7111 257.988 89.7015L257.988 89.7015L257.983 89.7041C255.745 90.87 253.183 91.5 250.5 91.5C247.817 91.5 245.255 90.87 243.017 89.7041L243.017 89.7041L243.012 89.7015C241.057 88.7111 239.309 87.3622 237.883 85.6863L237.883 85.6862L237.877 85.6785C235.135 82.589 233.5 78.5078 233.5 74C233.5 64.3211 241.124 56.5 250.5 56.5C259.876 56.5 267.5 64.3211 267.5 74C267.5 78.5078 265.865 82.589 263.123 85.6785Z" stroke="#e6e6e6" />
+                                    <path d="M304.541 177.773V175.336H487.249V183.832H13.7509V175.336H196.438V177.773V178.273H196.938H304.041H304.541V177.773Z" stroke="#e6e6e6" />
+                                    <path d="M0.5 216.205H500.5V224.701H0.5V216.205Z" stroke="#e6e6e6" />
+                                    <path d="M19.9576 183.832H481.021V216.205H19.9576V183.832Z" stroke="#e6e6e6" />
+                                    <path d="M279.993 259.818H306.912V265.998H279.993V259.818Z" stroke="#e6e6e6" />
+                                    <path d="M16.9817 260.318V261.147H16.1348V224.701H484.844V261.147H484.018V260.318V259.818H483.518H455.599H455.099V260.318V261.147H395.965V260.318V259.818H395.465H367.546H367.046V260.318V261.147H307.912V260.318V259.818H307.412H279.493H278.993V260.318V261.147H217.712V260.318V259.818H217.212H189.292H188.792V260.318V261.147H131.806V260.318V259.818H131.306H103.387H102.887V260.318V261.147H45.901V260.318V259.818H45.401H17.4817H16.9817V260.318Z" stroke="#e6e6e6" />
+                                    <path d="M17.9817 259.818H44.901V265.998H17.9817V259.818Z" stroke="#e6e6e6" />
+                                    <path d="M13.6435 413.632V411.86H15.3985H15.8985V411.36V409.674H17.1166H17.6166V409.174V405.859H19.5649H20.0566L20.0649 405.367L22.419 265.998H41.063L42.8178 405.365L42.824 405.859H43.3178H45.2661V409.174V409.674H45.7661H46.9842V411.36V411.86H47.4842H49.2392V413.632V414.132H49.7392H51.3224V425.5H11.5388V414.132H13.1435H13.6435V413.632Z" stroke="#e6e6e6" />
+                                    <path d="M103.887 259.818H130.806V265.998H103.887V259.818Z" stroke="#e6e6e6" />
+                                    <path d="M99.5489 413.632V411.86H101.304H101.804V411.36V409.674H103.022H103.522V409.174V405.859H105.47H105.962L105.97 405.367L108.324 265.998H126.968L128.723 405.365L128.729 405.859H129.223H131.171V409.174V409.674H131.671H132.89V411.36V411.86H133.39H135.145V413.632V414.132H135.645H137.228V425.5H97.4442V414.132H99.0489H99.5489V413.632Z" stroke="#e6e6e6" />
+                                    <path d="M189.792 259.818H216.712V265.998H189.792V259.818Z" stroke="#e6e6e6" />
+                                    <path d="M185.454 413.632V411.86H187.209H187.709V411.36V409.674H188.927H189.427V409.174V405.859H191.376H191.867L191.876 405.367L194.23 265.998H212.874L214.628 405.365L214.635 405.859H215.128H217.077V409.174V409.674H217.577H218.795V411.36V411.86H219.295H221.05V413.632V414.132H221.55H223.133V425.5H183.35V414.132H184.954H185.454V413.632Z" stroke="#e6e6e6" />
+                                    <path d="M275.655 413.632V411.86H277.41H277.91V411.36V409.674H279.128H279.628V409.174V405.859H281.576H282.068L282.076 405.367L284.43 265.998H303.074L304.829 405.365L304.835 405.859H305.329H307.277V409.174V409.674H307.777H308.996V411.36V411.86H309.496H311.251V413.632V414.132H311.751H313.334V425.5H273.55V414.132H275.155H275.655V413.632Z" stroke="#e6e6e6" />
+                                    <path d="M368.046 259.818H394.965V265.998H368.046V259.818Z" stroke="#e6e6e6" />
+                                    <path d="M363.708 413.632V411.86H365.463H365.963V411.36V409.674H367.181H367.681V409.174V405.859H369.629H370.121L370.129 405.367L372.483 265.998H391.127L392.882 405.365L392.888 405.859H393.382H395.33V409.174V409.674H395.83H397.048V411.36V411.86H397.548H399.304V413.632V414.132H399.804H401.387V425.5H361.603V414.132H363.208H363.708V413.632Z" stroke="#e6e6e6" />
+                                    <path d="M456.099 259.818H483.018V265.998H456.099V259.818Z" stroke="#e6e6e6" />
+                                    <path d="M451.761 413.632V411.86H453.516H454.016V411.36V409.674H455.234H455.734V409.174V405.859H457.682H458.174L458.182 405.367L460.536 265.998H479.18L480.935 405.365L480.941 405.859H481.435H483.383V409.174V409.674H483.883H485.101V411.36V411.86H485.601H487.356V413.632V414.132H487.856H489.44V425.5H449.656V414.132H451.261H451.761V413.632Z" stroke="#e6e6e6" />
+                                </svg>
                             </div>
                         </Col>
 
                         <Col sm={8} lg={6} className="" id="contact-right">
-                        {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo optio ab id non explicabo blanditiis accusantium excepturi in, eum, eius rem quas labore. Nam mollitia quas cupiditate eos dolorum labore velit et animi! Necessitatibus, temporibus hic? Eos doloremque rerum quam cumque sed, consequatur fuga iste necessitatibus, voluptas assumenda dolor. Illum libero laborum dolor, eligendi dolorem non eum sint hic eveniet, qui doloremque! Optio ut iusto, ab officia amet corporis nemo voluptatibus cumque aspernatur tempora? Voluptates deleniti eveniet, nulla harum praesentium, id expedita dignissimos consequuntur officiis, dolores a nihil commodi porro. Optio dolore porro sit nisi maxime, sed esse iure consectetur doloribus, omnis similique odit architecto, aspernatur magnam aliquam cupiditate. Sit distinctio, commodi ex fugiat molestias dignissimos nemo iste! Sed explicabo voluptatem, unde aperiam temporibus quaerat praesentium eos eligendi minima, quisquam hic aliquam placeat nemo illo eveniet ad veniam ea. Culpa dolores eum molestias, officiis quo molestiae quis praesentium, similique necessitatibus obcaecati nulla optio, sint vero ab corrupti incidunt perspiciatis at. Cupiditate facere quibusdam fugit hic perspiciatis obcaecati doloremque consequatur autem perferendis suscipit, delectus tempore in voluptate culpa vitae officiis ex provident illo labore! Quaerat non, amet dolor hic adipisci beatae illo minima aut aliquid magni, vel laudantium quas earum a possimus rerum atque animi ipsam totam. Quasi suscipit, consequatur odio similique dolorum consequuntur blanditiis quaerat repellendus, ducimus sit quos, autem excepturi sed iusto nulla? Praesentium, ratione veniam. Voluptate mollitia fugiat cumque neque, nobis praesentium, necessitatibus quia odio autem quasi voluptatibus incidunt eligendi voluptatum aperiam explicabo doloribus error illum perspiciatis id. Quaerat porro eligendi qui molestias ratione? Rem, iure. Minus quidem, culpa aliquam eos error, deleniti ratione dicta atque consectetur hic adipisci modi labore porro! Assumenda blanditiis natus architecto eligendi nulla explicabo error nesciunt vel iusto harum? Quos dicta incidunt, at quae mollitia impedit fugiat laboriosam facilis numquam perferendis quidem deleniti. Vitae amet, totam officiis itaque quisquam aperiam sapiente ratione vel minus ad quae assumenda laborum perspiciatis tempore velit iste voluptatum quaerat et. Neque qui, nisi id architecto impedit modi culpa tenetur amet, voluptatem quod repellendus laborum soluta, delectus perspiciatis aliquid! Et a error ea expedita consequatur necessitatibus, tempore magnam laudantium nostrum nemo, voluptatem nam fugit labore aut in ipsum quo saepe dolorem distinctio! Necessitatibus molestias iste similique hic rerum delectus voluptatum magnam. Voluptatibus velit suscipit quam ab porro fuga tempora iure exercitationem ex autem similique saepe accusamus vel quaerat, commodi non, voluptas molestias voluptatem alias omnis. Dolorum, asperiores perspiciatis. Incidunt quod reprehenderit quia rerum corrupti eaque aut, ipsa obcaecati, vitae neque ducimus magnam deserunt veniam in nobis architecto omnis maiores fuga tenetur pariatur officia sed quisquam. Eius architecto culpa excepturi, iste possimus repellendus quae, veniam non maiores, voluptatum ea. Dolorum, dicta. Voluptates cupiditate accusamus sit magnam vel ratione cumque ab quam odio quibusdam ullam expedita nulla sed mollitia excepturi quos natus, vitae nemo illum commodi. Dolorum distinctio iste eligendi cupiditate similique eos architecto ullam dolores ratione odio accusamus nisi perspiciatis molestiae non sapiente, praesentium pariatur dolore! Beatae possimus, maxime praesentium accusantium natus inventore voluptatibus quisquam. Maiores eum eligendi optio recusandae!</p> */}
-                        {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo optio ab id non explicabo blanditiis accusantium excepturi in, eum, eius rem quas labore. Nam mollitia quas cupiditate eos dolorum labore velit et animi! Necessitatibus, temporibus hic? Eos doloremque rerum quam cumque sed, consequatur fuga iste necessitatibus, voluptas assumenda dolor. Illum libero laborum dolor, eligendi dolorem non eum sint hic eveniet, qui doloremque! Optio ut iusto, ab officia amet corporis nemo voluptatibus cumque aspernatur tempora? Voluptates deleniti eveniet, nulla harum praesentium, id expedita dignissimos consequuntur officiis, dolores a nihil commodi porro. Optio dolore porro sit nisi maxime, sed esse iure consectetur doloribus, omnis similique odit architecto, aspernatur magnam aliquam cupiditate. Sit distinctio, commodi ex fugiat molestias dignissimos nemo iste! Sed explicabo voluptatem, unde aperiam temporibus quaerat praesentium eos eligendi minima, quisquam hic aliquam placeat nemo illo eveniet ad veniam ea. Culpa dolores eum molestias, officiis quo molestiae quis praesentium, similique necessitatibus obcaecati nulla optio, sint vero ab corrupti incidunt perspiciatis at. Cupiditate facere quibusdam fugit hic perspiciatis obcaecati doloremque consequatur autem perferendis suscipit, delectus tempore in voluptate culpa vitae officiis ex provident illo labore! Quaerat non, amet dolor hic adipisci beatae illo minima aut aliquid magni, vel laudantium quas earum a possimus rerum atque animi ipsam totam. Quasi suscipit, consequatur odio similique dolorum consequuntur blanditiis quaerat repellendus, ducimus sit quos, autem excepturi sed iusto nulla? Praesentium, ratione veniam. Voluptate mollitia fugiat cumque neque, nobis praesentium, necessitatibus quia odio autem quasi voluptatibus incidunt eligendi voluptatum aperiam explicabo doloribus error illum perspiciatis id. Quaerat porro eligendi qui molestias ratione? Rem, iure. Minus quidem, culpa aliquam eos error, deleniti ratione dicta atque consectetur hic adipisci modi labore porro! Assumenda blanditiis natus architecto eligendi nulla explicabo error nesciunt vel iusto harum? Quos dicta incidunt, at quae mollitia impedit fugiat laboriosam facilis numquam perferendis quidem deleniti. Vitae amet, totam officiis itaque quisquam aperiam sapiente ratione vel minus ad quae assumenda laborum perspiciatis tempore velit iste voluptatum quaerat et. Neque qui, nisi id architecto impedit modi culpa tenetur amet, voluptatem quod repellendus laborum soluta, delectus perspiciatis aliquid! Et a error ea expedita consequatur necessitatibus, tempore magnam laudantium nostrum nemo, voluptatem nam fugit labore aut in ipsum quo saepe dolorem distinctio! Necessitatibus molestias iste similique hic rerum delectus voluptatum magnam. Voluptatibus velit suscipit quam ab porro fuga tempora iure exercitationem ex autem similique saepe accusamus vel quaerat, commodi non, voluptas molestias voluptatem alias omnis. Dolorum, asperiores perspiciatis. Incidunt quod reprehenderit quia rerum corrupti eaque aut, ipsa obcaecati, vitae neque ducimus magnam deserunt veniam in nobis architecto omnis maiores fuga tenetur pariatur officia sed quisquam. Eius architecto culpa excepturi, iste possimus repellendus quae, veniam non maiores, voluptatum ea. Dolorum, dicta. Voluptates cupiditate accusamus sit magnam vel ratione cumque ab quam odio quibusdam ullam expedita nulla sed mollitia excepturi quos natus, vitae nemo illum commodi. Dolorum distinctio iste eligendi cupiditate similique eos architecto ullam dolores ratione odio accusamus nisi perspiciatis molestiae non sapiente, praesentium pariatur dolore! Beatae possimus, maxime praesentium accusantium natus inventore voluptatibus quisquam. Maiores eum eligendi optio recusandae!</p> */}
+                            {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo optio ab id non explicabo blanditiis accusantium excepturi in, eum, eius rem quas labore. Nam mollitia quas cupiditate eos dolorum labore velit et animi! Necessitatibus, temporibus hic? Eos doloremque rerum quam cumque sed, consequatur fuga iste necessitatibus, voluptas assumenda dolor. Illum libero laborum dolor, eligendi dolorem non eum sint hic eveniet, qui doloremque! Optio ut iusto, ab officia amet corporis nemo voluptatibus cumque aspernatur tempora? Voluptates deleniti eveniet, nulla harum praesentium, id expedita dignissimos consequuntur officiis, dolores a nihil commodi porro. Optio dolore porro sit nisi maxime, sed esse iure consectetur doloribus, omnis similique odit architecto, aspernatur magnam aliquam cupiditate. Sit distinctio, commodi ex fugiat molestias dignissimos nemo iste! Sed explicabo voluptatem, unde aperiam temporibus quaerat praesentium eos eligendi minima, quisquam hic aliquam placeat nemo illo eveniet ad veniam ea. Culpa dolores eum molestias, officiis quo molestiae quis praesentium, similique necessitatibus obcaecati nulla optio, sint vero ab corrupti incidunt perspiciatis at. Cupiditate facere quibusdam fugit hic perspiciatis obcaecati doloremque consequatur autem perferendis suscipit, delectus tempore in voluptate culpa vitae officiis ex provident illo labore! Quaerat non, amet dolor hic adipisci beatae illo minima aut aliquid magni, vel laudantium quas earum a possimus rerum atque animi ipsam totam. Quasi suscipit, consequatur odio similique dolorum consequuntur blanditiis quaerat repellendus, ducimus sit quos, autem excepturi sed iusto nulla? Praesentium, ratione veniam. Voluptate mollitia fugiat cumque neque, nobis praesentium, necessitatibus quia odio autem quasi voluptatibus incidunt eligendi voluptatum aperiam explicabo doloribus error illum perspiciatis id. Quaerat porro eligendi qui molestias ratione? Rem, iure. Minus quidem, culpa aliquam eos error, deleniti ratione dicta atque consectetur hic adipisci modi labore porro! Assumenda blanditiis natus architecto eligendi nulla explicabo error nesciunt vel iusto harum? Quos dicta incidunt, at quae mollitia impedit fugiat laboriosam facilis numquam perferendis quidem deleniti. Vitae amet, totam officiis itaque quisquam aperiam sapiente ratione vel minus ad quae assumenda laborum perspiciatis tempore velit iste voluptatum quaerat et. Neque qui, nisi id architecto impedit modi culpa tenetur amet, voluptatem quod repellendus laborum soluta, delectus perspiciatis aliquid! Et a error ea expedita consequatur necessitatibus, tempore magnam laudantium nostrum nemo, voluptatem nam fugit labore aut in ipsum quo saepe dolorem distinctio! Necessitatibus molestias iste similique hic rerum delectus voluptatum magnam. Voluptatibus velit suscipit quam ab porro fuga tempora iure exercitationem ex autem similique saepe accusamus vel quaerat, commodi non, voluptas molestias voluptatem alias omnis. Dolorum, asperiores perspiciatis. Incidunt quod reprehenderit quia rerum corrupti eaque aut, ipsa obcaecati, vitae neque ducimus magnam deserunt veniam in nobis architecto omnis maiores fuga tenetur pariatur officia sed quisquam. Eius architecto culpa excepturi, iste possimus repellendus quae, veniam non maiores, voluptatum ea. Dolorum, dicta. Voluptates cupiditate accusamus sit magnam vel ratione cumque ab quam odio quibusdam ullam expedita nulla sed mollitia excepturi quos natus, vitae nemo illum commodi. Dolorum distinctio iste eligendi cupiditate similique eos architecto ullam dolores ratione odio accusamus nisi perspiciatis molestiae non sapiente, praesentium pariatur dolore! Beatae possimus, maxime praesentium accusantium natus inventore voluptatibus quisquam. Maiores eum eligendi optio recusandae!</p> */}
+                            {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo optio ab id non explicabo blanditiis accusantium excepturi in, eum, eius rem quas labore. Nam mollitia quas cupiditate eos dolorum labore velit et animi! Necessitatibus, temporibus hic? Eos doloremque rerum quam cumque sed, consequatur fuga iste necessitatibus, voluptas assumenda dolor. Illum libero laborum dolor, eligendi dolorem non eum sint hic eveniet, qui doloremque! Optio ut iusto, ab officia amet corporis nemo voluptatibus cumque aspernatur tempora? Voluptates deleniti eveniet, nulla harum praesentium, id expedita dignissimos consequuntur officiis, dolores a nihil commodi porro. Optio dolore porro sit nisi maxime, sed esse iure consectetur doloribus, omnis similique odit architecto, aspernatur magnam aliquam cupiditate. Sit distinctio, commodi ex fugiat molestias dignissimos nemo iste! Sed explicabo voluptatem, unde aperiam temporibus quaerat praesentium eos eligendi minima, quisquam hic aliquam placeat nemo illo eveniet ad veniam ea. Culpa dolores eum molestias, officiis quo molestiae quis praesentium, similique necessitatibus obcaecati nulla optio, sint vero ab corrupti incidunt perspiciatis at. Cupiditate facere quibusdam fugit hic perspiciatis obcaecati doloremque consequatur autem perferendis suscipit, delectus tempore in voluptate culpa vitae officiis ex provident illo labore! Quaerat non, amet dolor hic adipisci beatae illo minima aut aliquid magni, vel laudantium quas earum a possimus rerum atque animi ipsam totam. Quasi suscipit, consequatur odio similique dolorum consequuntur blanditiis quaerat repellendus, ducimus sit quos, autem excepturi sed iusto nulla? Praesentium, ratione veniam. Voluptate mollitia fugiat cumque neque, nobis praesentium, necessitatibus quia odio autem quasi voluptatibus incidunt eligendi voluptatum aperiam explicabo doloribus error illum perspiciatis id. Quaerat porro eligendi qui molestias ratione? Rem, iure. Minus quidem, culpa aliquam eos error, deleniti ratione dicta atque consectetur hic adipisci modi labore porro! Assumenda blanditiis natus architecto eligendi nulla explicabo error nesciunt vel iusto harum? Quos dicta incidunt, at quae mollitia impedit fugiat laboriosam facilis numquam perferendis quidem deleniti. Vitae amet, totam officiis itaque quisquam aperiam sapiente ratione vel minus ad quae assumenda laborum perspiciatis tempore velit iste voluptatum quaerat et. Neque qui, nisi id architecto impedit modi culpa tenetur amet, voluptatem quod repellendus laborum soluta, delectus perspiciatis aliquid! Et a error ea expedita consequatur necessitatibus, tempore magnam laudantium nostrum nemo, voluptatem nam fugit labore aut in ipsum quo saepe dolorem distinctio! Necessitatibus molestias iste similique hic rerum delectus voluptatum magnam. Voluptatibus velit suscipit quam ab porro fuga tempora iure exercitationem ex autem similique saepe accusamus vel quaerat, commodi non, voluptas molestias voluptatem alias omnis. Dolorum, asperiores perspiciatis. Incidunt quod reprehenderit quia rerum corrupti eaque aut, ipsa obcaecati, vitae neque ducimus magnam deserunt veniam in nobis architecto omnis maiores fuga tenetur pariatur officia sed quisquam. Eius architecto culpa excepturi, iste possimus repellendus quae, veniam non maiores, voluptatum ea. Dolorum, dicta. Voluptates cupiditate accusamus sit magnam vel ratione cumque ab quam odio quibusdam ullam expedita nulla sed mollitia excepturi quos natus, vitae nemo illum commodi. Dolorum distinctio iste eligendi cupiditate similique eos architecto ullam dolores ratione odio accusamus nisi perspiciatis molestiae non sapiente, praesentium pariatur dolore! Beatae possimus, maxime praesentium accusantium natus inventore voluptatibus quisquam. Maiores eum eligendi optio recusandae!</p> */}
                             <p>
-                            If you want to collaborate on creating your dream websites – you are very welcome to contact me.
+                                If you want to collaborate on creating your dream websites – you are very welcome to contact me.
                             </p>
                             <br></br>
                             <br></br>
                             <p>
-                            I am available for freelance projects.
-                            <br></br>
-                            <a className="email" href="mailto:prajjawalsahu2001@gmail.com">prajjawalsahu2001@gmail.com</a>
+                                I am available for freelance projects.
+                                <br></br>
+                                <a className="email" href="mailto:prajjawalsahu2001@gmail.com">prajjawalsahu2001@gmail.com</a>
                             </p>
-                            <div className="contact-social project-buttons"  id="contacts-section">
-                            <a className="contacts-social-button" href="mailto:prajjawalsahu2001@gmail.com"><i className="fas fa-envelope"></i></a>
-                            <a className="contacts-social-button" href="https://github.com/PrajjawalSahu"><i className="fab fa-github"></i></a>
-                            <a className="contacts-social-button" href="https://www.instagram.com/prajjawalsahu/"><i className="fab fa-instagram"></i></a>
-                            
+                            <div className="contact-social project-buttons" id="contacts-section">
+                                <a className="contacts-social-button" href="https://www.linkedin.com/in/prajjawal-sahu-7372791b5/" target="blank"><i className="fab fa-linkedin"></i></a>
+                                <a className="contacts-social-button" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=prajjawalsahu2001@gmail.com&tf=1" target="blank"><i className="fas fa-envelope"></i></a>
+                                <a className="contacts-social-button" href="https://github.com/PrajjawalSahu" target="blank"><i className="fab fa-github"></i></a>
+                                <a className="contacts-social-button" href="https://www.instagram.com/prajjawalsahu/" target="blank"><i className="fab fa-instagram"></i></a>
+
                             </div>
                         </Col>
                     </Row>

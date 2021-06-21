@@ -6,13 +6,11 @@ import './MyNavbar.css';
 export default class MyNavbar extends Component {
     render() {
         return (
-            <Navbar bg="transparent" expand="lg" className="custom-css pl-3" sticky="top">
+            <Navbar bg="" expand="lg" className="custom-css-nav-component pl-3" >
                 <Navbar.Brand href="/home" className="nav-brand"></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto px-5">
-                        {/* <Nav.Link  className="px-5 custom-css-nav" href="/">Homei</Nav.Link> */}
-                        {/* <Nav.Link  className="px-5 custom-css-nav" href="/home">Home</Nav.Link> */}
                         <Nav.Link  className="px-5 custom-css-nav" href="#projects-section">Projects</Nav.Link>
                         {/* <Nav.Link  className="px-5 custom-css-nav" href="#about-section">About</Nav.Link> */}
                         <Nav.Link  className="px-5 custom-css-nav" href="#contacts-section">Contact</Nav.Link>
