@@ -5,20 +5,33 @@
 }
 .custom-css-nav-component{
     /* border: #FF7466 1px solid; */
-    background-color: transparent;
+    background-color: #011832;
     /* position: absolute; */
     height: 50px;
     padding-top: 20px;
 }
 .custom-css-nav{
     /* color: white !important; */
-    /* border: 5px yellow solid; */
-    /* background-color: white; */
+    background-color: #011832;
+
+    /* border-radius: 200px; */
+    text-align: start;
     color: #e6e6e6 !important;
-    /* border: #011832 solid 1px ; */
+    /* border: white solid 1px ; */
     /* position:  relative; */
     transition: 300ms ease-in;
+    /* width: 50%; */
 }
+@media screen and (max-width: 990px)
+{
+    .custom-css-nav{
+        box-shadow: #00000086 0px 0px 100px;
+    }
+}
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+  } 
+
 .custom-css-nav::after{
     /* position: absolute;
     content: '';
